@@ -8,7 +8,8 @@ an on-premise solution that enables you to seamlessly integrate EDI capabilities
 
 ### Community Edition - Public Beta
 
-A beta version of the free Community Edition is now available. You can access it using the link provided below, along with the accompanying setup instructions.
+A beta version of the free Community Edition is now available. You can download it from the __Releases__ page
+and run it as described below.
 
 ### Cross-Platform: Linux, Mac, and Windows
 
