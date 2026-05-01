@@ -2,7 +2,7 @@
 ![Banner image](images/github-header-banner.png)
 
 This is the homepage for the EDI Inspector, a desktop application designed to let you view, validate, and edit 
-DI data within an intuitive editor.
+EDI data within an intuitive editor.
 It works alongside the BerryWave API for EDI <https://www.berrywave-edi.com/>,
 an on-premise solution that enables you to seamlessly integrate EDI capabilities into your production workflows.
 
