@@ -1,108 +1,98 @@
+# BerryWave EDI Inspector
 
-![Banner image](images/github-header-banner.png)
+![Banner image](images/banner.png)
 
-This is the homepage for the EDI Inspector, a desktop application designed to let you view, validate, and edit 
-EDI data within an intuitive editor.
-It works alongside the BerryWave API for EDI <https://www.berrywave-edi.com/>,
-an on-premise solution that enables you to seamlessly integrate EDI capabilities into your production workflows.
+This is the homepage for the EDI Inspector, a desktop application designed to let you view, validate, and edit EDI data within an intuitive editor. It works alongside the [BerryWave API for EDI](https://www.berrywave-edi.com/), an on-premise solution that enables you to seamlessly integrate EDI capabilities into your production workflows.
 
-### Community Edition
+## Community Edition
 
-The first release of the free Community Edition is now available. You can download it from the __Releases__ page
-and run it as described below. An Enterprise Edition is coming soon with additional features.
+The first release of the free Community Edition is now available. You can download it from the *Releases* page and run it as described below. An Enterprise Edition is coming soon with additional features.
 
-### Cross-Platform: Linux, Mac, and Windows
+## Cross-Platform: Linux, Mac, and Windows
 
-This release is distributed as a standalone Java “fat” JAR that can be run on any system with Java installed.
-Native installers for macOS (.dmg) and Microsoft Windows (.msi) are planned for later.
-### Data Privacy
+This release is distributed as a standalone Java "fat" JAR that can be run on any system with Java 21 installed. Native installers for macOS (`.dmg`) and Microsoft Windows (`.msi`) are planned for later.
+
+## Data Privacy
 
 The application operates entirely locally and does not rely on any cloud services. All data remains securely on your desktop and is never transmitted elsewhere.
 
-### Community and Enterprise Editions
+## Community and Enterprise Editions
 
-The Community Edition is free and provides a rich set of fully-functional features.
+The Community Edition is free and provides a rich set of fully-functional features. The Enterprise Edition will soon be available from BerryWave Software with a site license. Contact us for further details.
 
-* View EDI content for X12 and EDIFACT in an EDI-aware editor window
-* With color-highlighting for the many delimiters, terminators, and other syntax characters
-* See an Overview that summarizes the business content 
-* Validate structural correctness of EDI enveloping
-* Repair structural errors
-* Save modified EDI content
+| Feature                                                    |         Community Edition          |   Enterprise Edition   |
+|:-----------------------------------------------------------|:----------------------------------:|:----------------------:|
+| View X12 and EDIFACT content in an EDI-aware editor        |                 ✅                  |           ✅            |
+| Color-highlighting for delimiters, terminators, and syntax |                 ✅                  |           ✅            |
+| Summary Overview of business content                       |                 ✅                  |           ✅            |
+| Validate structural correctness of EDI enveloping          |                 ✅                  |           ✅            |
+| Repair structural errors & save modified content           |                 ✅                  |           ✅            |
+| Large file support                                         | Up to 10 documents or 500 segments | Up to 100,000 segments |
+| Support for HL7 and TRADACOMS                              |                 ❌                  |           ✅            |
+| Full compliance checking via EDI models (document/version) |                 ❌                  |           ✅            |
+| Repair compliance errors                                   |                 ❌                  |           ✅            |
+| Generate EDI acknowledgments                               |                 ❌                  |           ✅            |
+| 837 Health Care Claim balancing                            |                 ❌                  |           ✅            |
+---
 
-The Enterprise Edition will soon be available from BerryWave Software with a site license
-and includes all the features in the Community Edition plus additional features.
-Contact us for more detail.
+## Running the Application
 
-* Support for HL7 and TRADACOMS
-* Perform full compliance checking via EDI models for specific document/version pairs
-* Repair compliance errors
-* Generate EDI acknowledgments
-* Industry-specific inspections
-  * claim balancing for 837 health care claims
-  * customized inspections created by BerryWave Software for your critical transactions
+The application is launched from the command line and uses Java separately installed on your computer. Platform-specific installers are planned as an option in future releases.
 
-### Running the Application
+### Prerequisites
+* **Java 21 (LTS) or later.** Verify your installation by running:
+  ```bash
+  java --version
+  ```
 
-The application is launched from the command line
-and uses Java separately installed on your computer.
-Platform-specific installers are planned as an option in future releases.
 
-**Prerequisite:** Java 21 or later. Verify with:
-
-```sh
-
-java --version
-
-```
 **Download and unzip**
 
-Use the Releases link to navigate to the assets for the latest release.
-Download the zip file asset and unzip it into an installation directory of your choice.
-(Disregard the Source .zip and tar.gz assets generated by GitHub.)
+1. Use the Releases link to navigate to the assets for the latest release.
+
+2. Download the edi-inspector-1.0.0.zip asset. (Note: You can disregard the Source .zip and tar.gz assets generated by GitHub).
+
+3. Unzip it into an installation directory of your choice.
+
+Once unzipped, your directory structure will look like this:
 
 ```
-edi-inspector-1.0.0.zip
-```
-
-After unzipping you will see:
-
-```
-edi-inspector.sh
-edi-inspector.bat
-edi-inspector-1.0.0.jar
+└── edi-inspector-1.0.0/
+    ├── edi-inspector.sh
+    ├── edi-inspector.bat
+    └── edi-inspector-1.0.0.jar
 ```
 
 **Start the application**
 
-To start the application from the command line, `cd` to your installation directory
-and run the script for your platform.
+Open your terminal or command prompt, navigate (cd) to your installation directory,
+and run the script for your platform:
 
-On Mac or Linux:
+* Mac or Linux:
 ```sh
 edi-inspector.sh
 ```
 
-On Windows:
+* Windows:
 ```sh
 edi-inspector.bat
 ```
 
-### User interface provided via your browser
+### User Interface Provided via your Browser
 
 The EDI Inspector interface runs in a browser tab.
-The application communicates with your browser through a port on your local machine. 
+The application communicates with your browser through a port on your local machine.
 By default, it selects an available port and opens a new tab in your default browser for easy access.
 
-#### Automatically opened browser tab
+#### Automatically Opened Browser Tab
 
 The application attempts to open a new tab in your default browser. In some environments,
 it may be necessary to open the tab directly.
 
-#### Opening a browser tab yourself
+#### Opening a Browser Tab Yourself
 
 When the application starts, it prints a local URL to the terminal.
-You can open this URL manually in your web browser.
+You can copy and paste this URL manually into your web browser's address bar.
 
 For example, you may see:
 
@@ -116,9 +106,9 @@ Copy this URL and paste it into your browser’s address bar to access the appli
 
 ### Configuring a specific port
 
-If you’d rather not have the application automatically select an available port,
-you can do that by editing the `application.yml` configuration file that is created
-when the application starts.
-The About menu choice shows you exactly where that file is on your computer,
-or you can find it in `(this needs to be edited)` in your installation directory.
+If you would rather not have the application automatically select an available port,
+you can lock down a specific port by editing the application.yml configuration file
+that is created when the application starts.
 
+The About menu choice inside the application shows you exactly where that file lives on your computer,
+or you can find it in [INSERT RELATIVE PATH HERE, E.G., THE ROOT OF] your installation directory.
