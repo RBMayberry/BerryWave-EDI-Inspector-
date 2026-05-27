@@ -1,57 +1,66 @@
 # BerryWave EDI Inspector
 
-![Banner image](images/banner.png)
+![Banner image](images/github-header-banner.png)
 
-This is the homepage for the EDI Inspector, a desktop application designed to let you view, validate, and edit EDI data within an intuitive editor. It works alongside the [BerryWave API for EDI](https://www.berrywave-edi.com/), an on-premise solution that enables you to seamlessly integrate EDI capabilities into your production workflows.
+This is the homepage for the EDI Inspector, a desktop application designed to let you view, validate, and edit EDI data
+within an intuitive editor. It works alongside the [BerryWave API for EDI](https://www.berrywave-edi.com/), an
+on-premise solution that enables you to seamlessly integrate EDI capabilities into your production workflows.
 
 ## Community Edition
 
-The first release of the free Community Edition is now available. You can download it from the *Releases* page and run it as described below. An Enterprise Edition is coming soon with additional features.
+The first release of the free Community Edition is now available. You can download it from the *Releases* page and run
+it as described below. An Enterprise Edition is coming soon with additional features.
 
 ## Cross-Platform: Linux, Mac, and Windows
 
-This release is distributed as a standalone Java "fat" JAR that can be run on any system with Java 21 installed. Native installers for macOS (`.dmg`) and Microsoft Windows (`.msi`) are planned for later.
+This release is distributed as a standalone Java "fat" JAR that can be run on any system with Java 21 installed. Native
+installers for macOS (`.dmg`) and Microsoft Windows (`.msi`) are planned for later.
 
 ## Data Privacy
 
-The application operates entirely locally and does not rely on any cloud services. All data remains securely on your desktop and is never transmitted elsewhere.
+The application operates entirely locally and does not rely on any cloud services. All data remains securely on your
+desktop and is never transmitted elsewhere.
 
 ## Community and Enterprise Editions
 
-The Community Edition is free and provides a rich set of fully-functional features. The Enterprise Edition will soon be available from BerryWave Software with a site license. Contact us for further details.
+The Community Edition is free and provides a rich set of fully-functional features. The Enterprise Edition will soon be
+available from BerryWave Software with a site license. Contact us for further details.
 
-| Feature                                                    |         Community Edition          |   Enterprise Edition   |
-|:-----------------------------------------------------------|:----------------------------------:|:----------------------:|
-| View X12 and EDIFACT content in an EDI-aware editor        |                 ✅                  |           ✅            |
-| Color-highlighting for delimiters, terminators, and syntax |                 ✅                  |           ✅            |
-| Summary Overview of business content                       |                 ✅                  |           ✅            |
-| Validate structural correctness of EDI enveloping          |                 ✅                  |           ✅            |
-| Repair structural errors & save modified content           |                 ✅                  |           ✅            |
-| Large file support                                         | Up to 10 documents or 500 segments | Up to 100,000 segments |
-| Support for HL7 and TRADACOMS                              |                 ❌                  |           ✅            |
-| Full compliance checking via EDI models (document/version) |                 ❌                  |           ✅            |
-| Repair compliance errors                                   |                 ❌                  |           ✅            |
-| Generate EDI acknowledgments                               |                 ❌                  |           ✅            |
-| 837 Health Care Claim balancing                            |                 ❌                  |           ✅            |
+| Feature                                                    |        Community Edition        |               Enterprise Edition               |
+|:-----------------------------------------------------------|:-------------------------------:|:----------------------------------------------:|
+| View X12 and EDIFACT content in an EDI-aware editor        |                ✅                |                       ✅                        |
+| Color-highlighting for delimiters, terminators, and syntax |                ✅                |                       ✅                        |
+| Summary Overview of business content                       |                ✅                |                       ✅                        |
+| Validate structural correctness of EDI enveloping          |                ✅                |                       ✅                        |
+| Repair structural errors & save modified content           |                ✅                |                       ✅                        |
+| Large file support                                         | Up 500 segments or 10 documents | Up to 100,000 segments and unlimited documents |
+| Support for HL7 and TRADACOMS                              |                ❌                |                       ✅                        |
+| Full compliance checking via EDI models (document/version) |                ❌                |                       ✅                        |
+| Repair compliance errors                                   |                ❌                |                       ✅                        |
+| Generate EDI acknowledgments                               |                ❌                |                       ✅                        |
+| 837 Health Care Claim balancing                            |                ❌                |                       ✅                        |
+
 ---
 
 ## Running the Application
 
-The application is launched from the command line and uses Java separately installed on your computer. Platform-specific installers are planned as an option in future releases.
+The application is launched from the command line and uses Java separately installed on your computer. Platform-specific
+installers are planned as an option in future releases.
 
 ### Prerequisites
-* **Java 21 (LTS) or later.** Verify your installation by running:
+
+- **Java 21 (LTS) or later.** Verify your installation by running:
   ```bash
   java --version
   ```
 
-
 **Download and unzip**
 
-1. Use the Releases link to navigate to the assets for the latest release.
+### Download and Unzip
 
-2. Download the edi-inspector-1.0.0.zip asset. (Note: You can disregard the Source .zip and tar.gz assets generated by GitHub).
-
+1. Use the **Releases** link to navigate to the assets for the latest release.
+2. Download the `edi-inspector-1.0.0.zip` asset. *(Note: You can disregard the Source .zip and tar.gz assets generated
+   by GitHub).*
 3. Unzip it into an installation directory of your choice.
 
 Once unzipped, your directory structure will look like this:
@@ -69,11 +78,13 @@ Open your terminal or command prompt, navigate (cd) to your installation directo
 and run the script for your platform:
 
 * Mac or Linux:
+
 ```sh
 edi-inspector.sh
 ```
 
 * Windows:
+
 ```sh
 edi-inspector.bat
 ```
@@ -102,13 +113,11 @@ Open in browser:
 http://localhost:12345
 ```
 
-Copy this URL and paste it into your browser’s address bar to access the application.
-
-### Configuring a specific port
+## Configuring a Specific Port
 
 If you would rather not have the application automatically select an available port,
-you can lock down a specific port by editing the application.yml configuration file
+you can lock down a specific port by editing the `application.yml` configuration file
 that is created when the application starts.
 
-The About menu choice inside the application shows you exactly where that file lives on your computer,
-or you can find it in [INSERT RELATIVE PATH HERE, E.G., THE ROOT OF] your installation directory.
+The **About** menu choice inside the application shows you exactly where that file lives on your computer,
+or you can find it in the `.ediinspector` folder within your user home directory.
