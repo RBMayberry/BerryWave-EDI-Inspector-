@@ -29,6 +29,7 @@ available from BerryWave Software with a site license. Contact us for further de
 | Feature                                                    |        Community Edition        |               Enterprise Edition               |
 |:-----------------------------------------------------------|:-------------------------------:|:----------------------------------------------:|
 | View X12 and EDIFACT content in an EDI-aware editor        |                ✅                |                       ✅                        |
+| View provided samples of common EDI transactions           |                ✅                |                       ✅                        |
 | Color-highlighting for delimiters, terminators, and syntax |                ✅                |                       ✅                        |
 | Summary Overview of business content                       |                ✅                |                       ✅                        |
 | Validate structural correctness of EDI enveloping          |                ✅                |                       ✅                        |
@@ -87,18 +88,20 @@ edi-inspector.sh
 edi-inspector.bat
 ```
 
-### User Interface Provided via your Browser
+## User Interface Provided via your Browser
 
 The EDI Inspector interface runs in a browser tab.
 The application communicates with your browser through a port on your local machine.
 By default, it selects an available port and opens a new tab in your default browser for easy access.
 
-#### Automatically Opened Browser Tab
+![EDI Inspector User Interface](images/ui-screenshot.png)
 
-The application attempts to open a new tab in your default browser. In some environments,
+### Automatically Opened Browser Tab
+
+TThe application attempts to open a new tab in your default browser. In some environments,
 it may be necessary to open the tab directly.
 
-#### Opening a Browser Tab Yourself
+### Opening a Browser Tab Yourself
 
 When the application starts, it prints a local URL to the terminal.
 You can copy and paste this URL manually into your web browser's address bar.
