@@ -26,20 +26,20 @@ desktop and is never transmitted elsewhere.
 The Community Edition is free and provides a rich set of fully-functional features. The Enterprise Edition will soon be
 available from BerryWave Software with a site license. Contact us for further details.
 
-| Feature                                                    |        Community Edition        |               Enterprise Edition               |
-|:-----------------------------------------------------------|:-------------------------------:|:----------------------------------------------:|
-| View X12 and EDIFACT content in an EDI-aware editor        |                ✅                |                       ✅                        |
-| View provided samples of common EDI transactions           |                ✅                |                       ✅                        |
-| Color-highlighting for delimiters, terminators, and syntax |                ✅                |                       ✅                        |
-| Summary Overview of business content                       |                ✅                |                       ✅                        |
-| Validate structural correctness of EDI enveloping          |                ✅                |                       ✅                        |
-| Repair structural errors & save modified content           |                ✅                |                       ✅                        |
-| Large file support                                         | Up 500 segments or 10 documents | Up to 100,000 segments and unlimited documents |
-| Support for HL7 and TRADACOMS                              |                ❌                |                       ✅                        |
-| Full compliance checking via EDI models (document/version) |                ❌                |                       ✅                        |
-| Repair compliance errors                                   |                ❌                |                       ✅                        |
-| Generate EDI acknowledgments                               |                ❌                |                       ✅                        |
-| 837 Health Care Claim balancing                            |                ❌                |                       ✅                        |
+| Feature                                                    |         Community Edition          |               Enterprise Edition               |
+|:-----------------------------------------------------------|:----------------------------------:|:----------------------------------------------:|
+| View X12 and EDIFACT content in an EDI-aware editor        |                 ✅                  |                       ✅                        |
+| View provided samples of common EDI transactions           |                 ✅                  |                       ✅                        |
+| Color-highlighting for delimiters, terminators, and syntax |                 ✅                  |                       ✅                        |
+| Summary Overview of business content                       |                 ✅                  |                       ✅                        |
+| Validate structural correctness of EDI enveloping          |                 ✅                  |                       ✅                        |
+| Repair structural errors & save modified content           |                 ✅                  |                       ✅                        |
+| Large file support                                         | Up to 500 segments or 10 documents | Up to 100,000 segments and unlimited documents |
+| Support for HL7 and TRADACOMS                              |                 ❌                  |                       ✅                        |
+| Full compliance checking via EDI models (document/version) |                 ❌                  |                       ✅                        |
+| Repair compliance errors                                   |                 ❌                  |                       ✅                        |
+| Generate EDI acknowledgments                               |                 ❌                  |                       ✅                        |
+| 837 Health Care Claim balancing                            |                 ❌                  |                       ✅                        |
 
 ---
 
@@ -51,9 +51,9 @@ installers are planned as an option in future releases.
 ### Prerequisites
 
 - **Java 21 (LTS) or later.** Verify your installation by running:
-  ```bash
-  java --version
-  ```
+```bash
+java --version
+```
 
 ### Download and Unzip
 
@@ -76,15 +76,13 @@ Once unzipped, your directory structure will look like this:
 Open your terminal or command prompt, navigate to your installation directory,
 and run the script for your platform:
 
-* Mac or Linux:
-
-```sh
-edi-inspector.sh
+* **Mac or Linux:**
+```bash
+  ./edi-inspector.sh
 ```
 
-* Windows:
-
-```sh
+* **Windows:**
+```bash
 edi-inspector.bat
 ```
 
@@ -98,7 +96,7 @@ By default, it selects an available port and opens a new tab in your default bro
 
 ### Automatically Opened Browser Tab
 
-TThe application attempts to open a new tab in your default browser. In some environments,
+The application attempts to open a new tab in your default browser. In some environments,
 it may be necessary to open the tab directly.
 
 ### Opening a Browser Tab Yourself
