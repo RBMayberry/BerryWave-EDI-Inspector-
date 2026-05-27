@@ -54,8 +54,6 @@ installers are planned as an option in future releases.
   java --version
   ```
 
-**Download and unzip**
-
 ### Download and Unzip
 
 1. Use the **Releases** link to navigate to the assets for the latest release.
@@ -72,9 +70,9 @@ Once unzipped, your directory structure will look like this:
     └── edi-inspector-1.0.0.jar
 ```
 
-**Start the application**
+### Start the Application 
 
-Open your terminal or command prompt, navigate (cd) to your installation directory,
+Open your terminal or command prompt, navigate to your installation directory,
 and run the script for your platform:
 
 * Mac or Linux:
@@ -113,7 +111,7 @@ Open in browser:
 http://localhost:12345
 ```
 
-## Configuring a Specific Port
+### Configuring a Specific Port
 
 If you would rather not have the application automatically select an available port,
 you can lock down a specific port by editing the `application.yml` configuration file
